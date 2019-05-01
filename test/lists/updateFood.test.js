@@ -5,11 +5,6 @@ var updateFood = require("../../lists/updateFood.js");
 var expect = chai.expect;
 
 xdescribe("List Exercise - updateFood()", function() {
-  xit("should not change original array of animals", function() {
-    let oldAnimals = JSON.parse(JSON.stringify(animals));
-    updateFood(animals);
-    expect(animals).to.deep.equal(oldAnimals);
-  });
   it("should return new array of animals with their new favorite food", function() {
     var newAnimals = [
       {
@@ -50,5 +45,10 @@ xdescribe("List Exercise - updateFood()", function() {
     ];
 
     expect(updateFood(animals)).to.deep.equal(newAnimals);
+  });
+  xit("should not change original array of animals", function() {
+    let oldAnimals = JSON.parse(JSON.stringify(animals));
+    updateFood(animals);
+    expect(animals).to.deep.equal(oldAnimals);
   });
 });
